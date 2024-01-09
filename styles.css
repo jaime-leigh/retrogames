@@ -279,51 +279,49 @@ ul > li {
 
 }
 
+.modal_p {
+    display: flex;
+    justify-content: center;
+    transition: 1.2s;
+}
 .the_creator {
-
+   
     width: 80%;
     max-width: 500px;
-    min-width: 20px;
-    display: block;
-    margin: 0 auto;
-    position: relative;
+    min-width: 100px;
+  
  
 }
 
 .the_creator:hover ~ .speech-img {
+ 
   display: block;
-  transform: translate(-150px, -500px);
 }
 
 .the_creator:hover {
-    transform: translatex(-40%);
+    
 }
 .speech-img {
-    width: 30%;
-    left: 60%;
-    
-    position: absolute;
+    width: 40%;
+    display: none;
     max-width: 500px;
-    min-width: 250px;
+    min-width: 200px;
   
  
-    display: none;
+    
 }
 
 @media only screen and (max-width: 768px) {
+   
     .speech-img {
-        width: 20%;
-        transform: translate(-150px, -400px);
-        position: absolute;
         display: block;
-      
-    
-        
+
+    }
+    .the_creator {
+        width: 40%;
     }
 
-    .the_creator {
-        transform: translatex(-45%);
-    }
+    
 }
 
 
