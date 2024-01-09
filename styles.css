@@ -1,0 +1,482 @@
+/* MEDIA QUERY SIZING 
+EXTRA SMALL
+@media only screen and (max-width: 600px) { 
+}
+
+SMALL DEVICES (PORTRAIT TABLE AND LARGE PHONES)
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+}
+
+MEDIUM DEVICES (TABLETS LANDSCAPE)
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    
+}
+
+LARGE DEVICES (LAPTTOPS/DESKTOPS)
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    
+}
+
+EXTRA LARGE DEVICES (LARGE LAPTOPS AND DESKTOPS)
+@media only screen and (min-width: 1200px) {
+    
+}
+*/
+
+/*CSS RESET CODE*/
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+
+*, html {
+    width: 100%;
+    
+}
+
+/*Global VARIABLES*/
+
+:root {
+    --green: #7ED857;
+    --yellow: #FFC152;
+    --pink: #FF3F8C;
+    --dark-colour: #000022;
+    --light-colour: #DDF0FF; 
+    --heading-font: 'DotGothic16', sans-serif;
+    --body-font: 'Cousine', monospace;
+
+
+
+}
+
+.material-icons {
+   font-size: 3rem !important;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  
+
+body {
+    background-color: var(--dark-colour);
+    color: var(--light-colour);
+    font-family: var(--body-font);
+}
+
+h1, h3 {
+    font-family: var(--heading-font);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+
+p {
+   
+    padding: 1rem 15rem;
+    position: relative;
+}
+
+ul > li {
+    padding: 0 5rem;
+}
+
+@media only screen and (max-width: 992px) {
+  p  {
+        
+        padding: 1rem 5rem;
+        
+    }
+}
+
+.heading {
+    font-size: 6.5rem;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1200px) {
+    .heading {
+        font-size: 4rem;
+        padding: 1rem;
+    }
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.retroimg {
+   width: 100%;
+   min-width: 270px;
+   max-width: 550px;
+   padding: 3rem;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px)  {
+    .flex-container {
+        flex-wrap: wrap;
+    }
+   
+    .retroimg {
+        width: 60%;
+        padding: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 600px) { 
+    .flex-container {
+        flex-wrap: wrap;
+    }
+   
+    .retroimg {
+        width: 55%;
+        padding: 1rem;
+    }
+}
+/*NAVIGATION*/
+.flex-container-nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--light-colour);
+    
+}
+
+
+
+
+
+.flex-item-nav {
+    width: 3rem;
+}
+
+
+/*PAGES*/
+
+/*SPACE INVADERS*/
+.travelling-space-invader {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10000;
+    animation: space-invader 1.5s 3 alternate;
+    transform: translateY(-50%);
+    width: 10%;
+    min-width: 70px;
+    right: 5%;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+    .travelling-space-invader {
+        animation: space-invader-medium-screen 1s 4 alternate;
+        transform: translateY(0%);
+        left: 0%;
+        max-width: 200px;
+    }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .travelling-space-invader {
+        animation: space-invader-small-screen 0.5s 4 alternate;
+        transform: translateY(0%);
+        left: 0%;
+        max-width: 150px;
+       
+    }
+}
+
+
+
+
+
+
+.travelling-space-invader:hover {
+    
+    width: 300px;
+    
+}
+
+.line-img {
+    display: block;
+    width: 10%;
+    min-width: 200px;
+    margin: 0 auto;
+
+}
+
+.wotw-img {
+    max-width: 40%;
+    min-width: 300px;
+    margin: 0 auto;
+    position: relative;
+    display: block;
+    
+}
+
+.wotw-img:hover {
+    animation: shakey 0.2s infinite;
+
+}
+
+.the_creator {
+
+    width: 80%;
+    max-width: 500px;
+    min-width: 200px;
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.the_creator:hover ~ .speech-img {
+  transform: translateX(-100px);
+  display: block;
+}
+
+.the_creator:hover {
+    transform: translatex(-20%);
+}
+.speech-img {
+    width: 40%;
+    left: 60%;
+    position: absolute;
+    max-width: 500px;
+    min-width: 300px;
+  
+    top: 0px;
+  
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .speech-img {
+        width: 40%;
+        transform: translate(-130px, -67px);
+        position: absolute;
+        max-width: 500px;
+        min-width: 300px;
+      display: block;
+        top: 0px;
+      
+        
+    }
+
+    .the_creator {
+        transform: translatex(-50%);
+    }
+}
+
+
+
+
+
+/*FOOTER*/
+.footer {
+    background-color: var(--light-colour);
+    color: var(--dark-colour);
+    position: relative;
+    bottom: 0;
+    font-size: 2rem;
+}
+.footer-flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.by {
+    padding: 3rem;
+}
+
+
+
+/*ANIMATIONS*/
+@keyframes space-invader-small-screen {
+    0% {
+        left: 2%;
+    }
+    100% {
+        left: 25%;
+    }
+}
+
+@keyframes space-invader-medium-screen {
+    0% {
+        left: 0;
+    }
+    10% {
+        left: 7%;
+    }
+    20% {
+        left: 14%;
+    }
+    30% {
+        left: 21%;
+    }
+    40% {
+        left: 28%;
+    }
+    50% {
+        left: 35%;
+    }
+    60% {
+        left: 42%;
+    }
+    70% {
+        left: 50%
+    }
+    80% {
+        left: 58%;
+    }
+    90% {
+        left: 72%;
+    }
+
+    100% {
+        left: 80%;
+    }
+}
+
+@keyframes space-invader {
+    0% {
+        left: 10%;
+        
+        
+    }
+    10% {
+        left: 14%;
+        
+        
+    }
+    15% {
+        left: 18%;
+        
+        
+    }
+    20% {
+        left: 22%;
+        
+        
+    }
+
+    25% {
+        left: 26%;
+        
+        
+    }
+    30% {
+        left: 30%;
+        
+        
+    }
+    35% {
+        left: 34%;
+        
+        
+    }
+
+    40% {
+        left: 38%;
+        
+        
+    }
+    45% {
+        left: 42%;
+        
+        
+    }
+
+    50% {
+        left: 46%;
+        
+        
+    }
+    55% {
+        left: 50%;
+        
+        
+    }
+    60% {
+        left: 54%;
+        
+        
+    }
+    65% {
+        left: 58%;
+        
+        
+    }
+    70% {
+        left: 62%;
+        
+        
+    }
+    75% {
+        left: 66%;
+        
+        
+    }
+    80% {
+        left: 70%;
+        
+        
+    }
+    85% {
+        left: 74%;
+        
+        
+    }
+    90% {
+        left: 78%;
+        
+        
+    }
+    95% {
+        left: 82%;
+        
+        
+    }
+
+    100% {
+        left: 84%;
+        
+        
+    }
+}
+
+@keyframes shakey {
+    0%, 100%{
+        transform: rotate(0deg);
+       
+    }
+
+    35% {
+        transform: rotate(2deg);
+        
+    }
+   
+    75% {
+       
+        transform: rotate(-2deg);
+    }
+    
+}
