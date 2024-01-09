@@ -72,20 +72,53 @@ body {
     background-color: var(--dark-colour);
     color: var(--light-colour);
     font-family: var(--body-font);
+    text-align: justify;
 }
 
 h1, h3 {
     font-family: var(--heading-font);
     text-align: center;
     padding: 1rem 0;
+    transition: 0.5s;
+    z-index: 1000;
+ 
+    animation: shakey 0.5s 5;
+    color: var(--green);
+    font-size: 3rem;
+   
 }
+
+h1:hover {
+    box-shadow: 3px 3px 3px 3px rgba(123, 252, 3, 1);
+    transform: rotate(-7deg);
+    color: var(--pink);
+    font-size: 3rem;
+    background-color: var(--dark-colour);
+    
+
+}
+
+
+
+@media only screen and (max-width: 992px) {
+    h1 {
+        box-shadow: 3px 3px 3px 3px rgba(123, 252, 3, 1);
+        animation: shakey 0.5s 5;
+        color: var(--pink);
+        font-size: 3rem;
+        background-color: var(--dark-colour);
+    
+    }
+}
+
+
 
 
 
 p {
    
-    padding: 1rem 15rem;
-    position: relative;
+    padding: 1rem 9rem;
+    
 }
 
 ul > li {
@@ -99,6 +132,7 @@ ul > li {
         
     }
 }
+
 
 .heading {
     font-size: 6.5rem;
@@ -175,13 +209,13 @@ ul > li {
     position: fixed;
     z-index: 10000;
     animation: space-invader 1.5s 3 alternate;
-    transform: translateY(-50%);
+    transform: translateY(-70%);
     width: 10%;
     min-width: 70px;
     right: 5%;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen  and (max-width: 768px) {
     .travelling-space-invader {
         animation: space-invader-medium-screen 1s 4 alternate;
         transform: translateY(0%);
@@ -192,15 +226,6 @@ ul > li {
 
 
 
-@media only screen and (max-width: 600px) {
-    .travelling-space-invader {
-        animation: space-invader-small-screen 0.5s 4 alternate;
-        transform: translateY(0%);
-        left: 0%;
-        max-width: 150px;
-       
-    }
-}
 
 
 
@@ -218,6 +243,14 @@ ul > li {
     width: 10%;
     min-width: 200px;
     margin: 0 auto;
+    
+
+}
+
+.line-img:hover {
+    transform: rotate(3deg);
+    box-shadow: 5px 5px 5px 0px rgba(123, 252, 3, 0.637);
+    width: 12%;
 
 }
 
@@ -227,6 +260,8 @@ ul > li {
     margin: 0 auto;
     position: relative;
     display: block;
+    padding: 2rem 0;
+    transition: 0.5s;
     
 }
 
@@ -235,77 +270,88 @@ ul > li {
 
 }
 
+
+@media only screen and  (max-width: 992px) {
+    .wotw-img {
+        animation: shakey 0.3s 8;
+        
+    }
+
+}
+
 .the_creator {
 
     width: 80%;
     max-width: 500px;
-    min-width: 200px;
+    min-width: 20px;
     display: block;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
+ 
 }
 
 .the_creator:hover ~ .speech-img {
-  transform: translateX(-100px);
   display: block;
+  transform: translate(-150px, -500px);
 }
 
 .the_creator:hover {
-    transform: translatex(-20%);
+    transform: translatex(-40%);
 }
 .speech-img {
-    width: 40%;
+    width: 30%;
     left: 60%;
+    
     position: absolute;
     max-width: 500px;
-    min-width: 300px;
+    min-width: 250px;
   
-    top: 0px;
-  
+ 
     display: none;
 }
 
 @media only screen and (max-width: 768px) {
     .speech-img {
-        width: 40%;
-        transform: translate(-130px, -67px);
+        width: 20%;
+        transform: translate(-150px, -400px);
         position: absolute;
-        max-width: 500px;
-        min-width: 300px;
-      display: block;
-        top: 0px;
+        display: block;
       
+    
         
     }
 
     .the_creator {
-        transform: translatex(-50%);
+        transform: translatex(-45%);
     }
 }
 
 
+.references {
+    padding-bottom: 8rem; text-align: center;
+}
 
+.references:hover {
+    transform: rotate(-3deg);
+   
+}
 
 
 /*FOOTER*/
 .footer {
     background-color: var(--light-colour);
     color: var(--dark-colour);
-    position: relative;
     bottom: 0;
-    font-size: 2rem;
+    font-size: 0.7rem;
 }
 .footer-flex-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     
 }
 
-.by {
-    padding: 3rem;
-}
 
 
 
